@@ -73,7 +73,8 @@ app.delete('/api/employees/:id', function (req, res) {
     res.send(deleter(employees, parseInt(req.params.id)));
 });
 
-// helper function used
+//this is a deleter function used in app.delete
+//it finds the index of the array and deletes using splice method
 function deleter(arr, ele) {
     let temp = 0;
     for (let i = 0; i < arr.length; ++i) {
