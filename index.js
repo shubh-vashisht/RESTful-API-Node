@@ -61,7 +61,7 @@ app.put('/api/employees/:id', function (req, res) {
 function empvalidate(e) {
     const schema = {
         name: Joi.string().min(4).required(),
-        age: Joi.number().min(18)
+        age: Joi.number().min(18).required()
     };
     return Joi.validate(e, schema);
 }
